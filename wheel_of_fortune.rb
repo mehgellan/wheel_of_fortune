@@ -1,7 +1,19 @@
 class WheelOfFortune
-  def initialize
+  def initialize(params)
     p "Happy coding!"
+    @phrase = params[:phrase]
+    @theme = params[:theme]
   end
+
+  def theme
+    p @theme
+  end
+
+  
+
+
+
+
 
   def to_s
     nil
