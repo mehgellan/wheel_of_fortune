@@ -1,28 +1,27 @@
 class WheelOfFortune
+  attr_accessor :phrase
   def initialize(params)
     p "Happy coding!"
     @phrase = params[:phrase]
     @theme = params[:theme]
+    @guesses = []
   end
 
   def theme
-    p @theme
+    @theme
   end
 
   def guesses
-    guesses = []
+    @guesses
   end
 
-
-
-
-
   def to_s
-    nil
+    unguessed = @phrase.gsub(/[a-zA-Z]/, "_")
   end
 
   def can_i_have?(input)
-    nil
+    @guesses << input
+    @phrase.downcase.include?(input.downcase)
   end
 
   def game_over?
