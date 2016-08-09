@@ -9,7 +9,9 @@ class WheelOfFortune
     p @theme
   end
 
-  
+  def guesses
+    guesses = []
+  end
 
 
 
